@@ -5,7 +5,7 @@ Projekt to budzik ktory po alarmie odtwarza muzykę:
 Elementy:
 DFPlayer
 Arduino UNI
-LCD Display
+LCD Wyswietlacz
 Rezystor 10k 1k
 Pot 10k
 Przyciski
