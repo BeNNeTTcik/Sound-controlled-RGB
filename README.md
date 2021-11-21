@@ -5,7 +5,7 @@
 # Opis projektu:
 
  Uklad zlozony z 3 tranzystorow TIP41C, 3 rezystorw oraz czujnika dzwieku. Czujnik bedzie odpowiadal za wykrycie odpowiednich tonow z glosnika, 
- zidentyfikuje ton i przkaze odopowiedni impuls na tasme LED. 
+ uklad zidentyfikuje ton i przkaze odopowiedni impuls na tasme LED. 
  
  Filmik YT pokazujace jak zbudowac dany uklad oraz demonstruje jego dziala:
 [link_do_YT](https://www.youtube.com/watch?v=G-zCNkNp4RY)
