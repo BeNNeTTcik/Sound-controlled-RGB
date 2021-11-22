@@ -32,9 +32,9 @@ Rzeczy potrzebne do zbudowania ukladu:
 
 
 Montujemy tranzystory na plytce. Na wysokosci bazy przy kazdym z tranzystorow wpinamy rezystory 1kOhm. Pod jedna z nozek rezystora wpinamy przewod 
-i wpinamy odpowiednio pod `.tranzystor nr 1 -> pin 11` na plytce Arduino, `.tranzystor nr 2 -> pin 10` i `.tranzystor nr 3 -> pin 9`. Wyjscie z emitera 
-podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: `.OUT -> A0 | Analog in (23 pin)`,
-`.GND -> GND | (3 lub 5 pin)`, `.VCC -> VCC | (4 lub 6 pin)`. Gotowe polaczenia znajduja sie na zdj. ponizej.
+i wpinamy odpowiednio pod `.tranzystor nr 1 -> pin 11` na plytce Arduino, `tranzystor nr 2 -> pin 10` i `tranzystor nr 3 -> pin 9`. Wyjscie z emitera 
+podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: `OUT -> A0 | Analog in (23 pin)`,
+`GND -> GND | (3 lub 5 pin)`, `VCC -> VCC | (4 lub 6 pin)`. Gotowe polaczenia znajduja sie na zdj. ponizej.
 
 ![img](./uklad.png)
 
@@ -44,8 +44,8 @@ Teraz czas na kodowanie w tym celu podpinamy wejscie USB-C na plytce Arduino do 
 ![img](./uklad2.png)
 
 
-Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw: `.BLUE -> tranzystor nr 3`, `.RED -> tranzystor 1`, `.GREEN -> tranzystor 2`.
-Ostatni z wejsc to zasilanie do tasmy LED: `.BLACK -> plus na plytce`. Teraz musimy podpiac zasilanie do tasmy LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,
+Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw: `BLUE -> tranzystor nr 3`, `RED -> tranzystor 1`, `GREEN -> tranzystor 2`.
+Ostatni z wejsc to zasilanie do tasmy LED: `BLACK -> plus na plytce`. Teraz musimy podpiac zasilanie do tasmy LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,
 podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Arduino.
 
 ![img](./uklad3.png)
