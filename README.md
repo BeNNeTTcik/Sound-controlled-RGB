@@ -23,14 +23,14 @@ Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-a
 
 # Schemat Eagle:
 
-![img](./schemat.png)
+![img](./image/schemat.png)
 
 # Etapy budowy:
 
 Rzeczy potrzebne do zbudowania ukladu:
 
 
-![img](./elementy.png)
+![img](./image/elementy.png)
 
 
 Montujemy tranzystory na plytce. Na wysokosci bazy przy kazdym z tranzystorow wpinamy rezystory 1kOhm. Pod jedna z nozek rezystora wpinamy przewod 
@@ -39,13 +39,13 @@ podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czu
 `GND -> GND | (3 lub 5 pin)`, `VCC -> VCC | (4 lub 6 pin)`. Gotowe polaczenia znajduja sie na zdj. ponizej.
 
 
-![img](./uklad.png)
+![img](./image/uklad.png)
 
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C**:
 
 
-![img](./uklad2.png)
+![img](./image/uklad2.png)
 
 
 Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw (od lewej patrzac na zdj tranzystor nr 1 potem 2 i 3 ): `RED -> tranzystor 1`,
@@ -54,10 +54,10 @@ LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,podpinamy plus do tego samego rzedu
 z emiterow tranzystorwo oraz plytki Arduino.
 
 
-![img](./uklad3.png)
+![img](./image/uklad3.png)
 
 
 Testujemy gotowy uklad:
 
 
-![img](./gotowe.png)
+![img](./image/gotowe.png)
