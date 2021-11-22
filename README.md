@@ -23,7 +23,7 @@ Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-a
 
 # Schemat Eagle:
 
-![schemat_pdf](schemat.pdf)
+![img](./schemat.pdf)
 
 # Etapy budowy:
 
