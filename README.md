@@ -1,5 +1,4 @@
-# lab-tm-projekt
- 
+
 # Projekt - RGB LED kula disco sterowana dzwiekiem:
 
 # Opis projektu:
