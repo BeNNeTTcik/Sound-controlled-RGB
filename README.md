@@ -44,9 +44,10 @@ Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do 
 ![img](./uklad2.png)
 
 
-Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw (od lewej patrzac na zdj tranzystor nr 1 potem 2 i 3 ): `BLUE -> tranzystor nr 3`, `RED -> tranzystor 1`, `GREEN -> tranzystor 2`.
-Ostatni z wejsc to zasilanie do tasmy LED: `BLACK -> plus na plytce`. Teraz musimy podpiac zasilanie do tasmy LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,
-podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Arduino.
+Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw (od lewej patrzac na zdj tranzystor nr 1 potem 2 i 3 ): `RED -> tranzystor 1`,
+`GREEN -> tranzystor 2`, `BLUE -> tranzystor nr 3`.Ostatni z wejsc to zasilanie do tasmy LED: `BLACK -> plus na plytce`. Teraz musimy podpiac zasilanie do tasmy 
+LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED oraz minus do rzadu gdzie mamy wpiety GND
+z emiterow tranzystorwo oraz plytki Arduino.
 
 ![img](./uklad3.png)
 
