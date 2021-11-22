@@ -23,11 +23,25 @@ Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-a
 
 # Schemat Eagle:
 
-![img](./schemat.png)
+![img](./schemat.pdf)
 
 # Etapy budowy:
+
+Rzeczy potrzebne do zbudowania ukladu:
 ![img](./elementy.png)
+
+Montujemy tranzystory na plytce. Na wysokosci bazy przy kazdym z tranzystorow wpinamy rezystory 1kOhm. Pod jedna z nozek rezystora wpinamy przewod 
+i wpinamy odpowiednio pod tranzystor nr 1 -> pin 11 na plytce Arduino, tranzystor nr 2 -> pin 10 i tranzystor nr 3 -> pin 9. Wyjscie z emitera 
+podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: OUT -> A0 | Analog in (23 pin),
+GND -> GND | (3 lub 5 pin), VCC -> VCC | (4 lub 6 pin). Gotowe polaczenia znajduja sie na zdj. ponizej.
+
 ![img](./uklad.png)
+
+Teraz czas na kodowanie:
+
 ![img](./uklad2.png)
+
+Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw: BLUE -> tranzystor nr 3,  
+
 ![img](./uklad3.png)
 ![img](./gotowe.png)
