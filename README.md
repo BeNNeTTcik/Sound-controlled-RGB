@@ -28,6 +28,8 @@ Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-a
 # Etapy budowy:
 
 Rzeczy potrzebne do zbudowania ukladu:
+
+
 ![img](./elementy.png)
 
 
@@ -36,10 +38,12 @@ i wpinamy odpowiednio pod `.tranzystor nr 1 -> pin 11` na plytce Arduino, `tranz
 podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: `OUT -> A0 | Analog in (23 pin)`,
 `GND -> GND | (3 lub 5 pin)`, `VCC -> VCC | (4 lub 6 pin)`. Gotowe polaczenia znajduja sie na zdj. ponizej.
 
+
 ![img](./uklad.png)
 
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C**:
+
 
 ![img](./uklad2.png)
 
@@ -49,9 +53,11 @@ Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzysto
 LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED oraz minus do rzadu gdzie mamy wpiety GND
 z emiterow tranzystorwo oraz plytki Arduino.
 
+
 ![img](./uklad3.png)
 
 
 Testujemy gotowy uklad:
+
 
 ![img](./gotowe.png)
