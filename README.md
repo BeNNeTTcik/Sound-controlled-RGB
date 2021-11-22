@@ -39,7 +39,7 @@ podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czu
 ![img](./uklad.png)
 
 
-Teraz czas na kodowanie w tym celu podpinamy wejscie USB-C na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C**:
+Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C**:
 
 ![img](./uklad2.png)
 
