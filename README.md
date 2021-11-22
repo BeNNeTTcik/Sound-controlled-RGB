@@ -22,6 +22,10 @@ Arduino UNO - [sklep_ardunino_uno](https://allegro.pl/oferta/zestaw-startowy-do-
 
 Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-arduino-uno-r3-atmega328-ch340-10102800766)
 
+# Schemat Eagle:
+
+![img](./scheamt.png)
+
 # Etapy budowy:
 ![img](./elementy.png)
 ![img](./uklad.png)
