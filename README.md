@@ -12,14 +12,25 @@
 # Lista elementow:
 
 Tranzystor TIP41C - [sklep_tranzystor](https://allegro.pl/oferta/tranzystor-tip41c-tip41-6a-100v-fairchild-to-220-10798629711)
+![img](./image/Tranzystor_TIP41C.jpg)
 
 Tasma RGB LED - [sklep_tasma](https://allegro.pl/oferta/tasma-led-smd-wodoodporna-5m-rgb-kolorowa-pilot-10192557011)
+![img](./image/Taśma_LED.jpg)
+
+Zasilacz do taśmy LED
+![img](./image/zasilacz.jpg)
 
 Zatrzask JACK 2.1/5.5 - [sklep_zatrzask_jack](https://allegro.pl/oferta/szybkozlacze-komplet-g55-gniazdo-zasilania-2-1-5-5-10807172353)
+![img](./image/zatrzask.jpg)
 
 Arduino UNO - [sklep_ardunino_uno](https://allegro.pl/oferta/zestaw-startowy-do-arduino-uno-r3-atmega328-ch340-10102800766)
+![img](./image/Arduino_UNO.jpg)
 
 Rezystor 1kOhm - [sklep_rezystor](https://allegro.pl/oferta/zestaw-startowy-do-arduino-uno-r3-atmega328-ch340-10102800766)
+![img](./image/R_1kOhm.jpg)
+
+Czujnik dzwięku
+![img](./image/czujnik_dzwieku.jpg)
 
 # Schemat Eagle:
 
