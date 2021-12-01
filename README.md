@@ -41,7 +41,7 @@ Czujnik dzwięku
 Rzeczy potrzebne do zbudowania ukladu:
 
 
-![img](./image/elementy.png)
+![img](./image/elementy.jpg)
 
 
 Montujemy tranzystory na plytce. Na wysokosci bazy przy kazdym z tranzystorow wpinamy rezystory 1kOhm. Pod jedna z nozek rezystora wpinamy przewod 
