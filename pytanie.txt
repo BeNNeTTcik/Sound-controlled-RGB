@@ -1,0 +1,3 @@
+Jak zaimplementowac:
+#include <avr/io.h>
+#include <util/dealy.h>?
