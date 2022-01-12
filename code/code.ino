@@ -16,8 +16,6 @@ void setup () {
 void loop () {
   wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
   
-  Serial.print(wartosc);
-  Serial.print(" ");
   FiltrLP(wartosc);
   
   Serial.println(sygnal_zfiltrowany);
