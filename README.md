@@ -82,18 +82,18 @@ oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Ar
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C++**:
 
-```
-Pozwalana na skojarzenie pinow z nazwa, ktora bedziemy wykorzystywac w kodzie:
+```cp
+//Pozwalana na skojarzenie pinow z nazwa, ktora bedziemy wykorzystywac w kodzie:
 #define Rpin 11						
 #define Gpin 10
 #define Bpin 9
 #define czujnik_sygnal A0
 
-Tworzymy zmienne oraz okreslamy wartosci sygnalu do ktorego bedziemy przyrownywac sygnal zfiltrowany:
+//Tworzymy zmienne oraz okreslamy wartosci sygnalu do ktorego bedziemy przyrownywac sygnal zfiltrowany:
 float wartosc=0, sygnal_zfiltrowany = 0, przedzial[] = {21, 26};
 
-Okreslamy czestotliwosc CPU funkcja Serial.begin() oraz okreslamy piny jako wejscie badz wyjscie
-funkcje pinMode():
+//Okreslamy czestotliwosc CPU funkcja Serial.begin() oraz okreslamy piny jako wejscie badz wyjscie
+//funkcje pinMode():
 void setup () { 
   Serial.begin (9600);
   pinMode(czujnik_sygnal, INPUT);
@@ -102,10 +102,10 @@ void setup () {
   pinMode(Bpin, OUTPUT);
 }
 
-Zczytujemy analogowa wartosc z czujnika i zamieniamy ja na cyfrowa, po czym funkcja FiltrLP() 
-filtrujemy sygnal filtrem cyfrowym pierwszego rzedu dolnoprzepustowym, do okreslenia ram wartosci 
-sygnalu posluzylem sie funkcja kreslenia w srodowisku Arduino (zdjecie ponizej kodu), kolejnym 
-krokiem bedzie przyrownywanie wartosci do zfiltrowanych do kilku wartosci z przedzialu:
+//Zczytujemy analogowa wartosc z czujnika i zamieniamy ja na cyfrowa, po czym funkcja FiltrLP() 
+//filtrujemy sygnal filtrem cyfrowym pierwszego rzedu dolnoprzepustowym, do okreslenia ram wartosci 
+//sygnalu posluzylem sie funkcja kreslenia w srodowisku Arduino (zdjecie ponizej kodu), kolejnym 
+//krokiem bedzie przyrownywanie wartosci do zfiltrowanych do kilku wartosci z przedzialu:
 void loop () {
   wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
   
@@ -131,13 +131,10 @@ void loop () {
     }
 }
 
-Filtr cyfrowy pierwszego rzadu dolnoprzepustowy:
+//Filtr cyfrowy pierwszego rzadu dolnoprzepustowy:
 void FiltrLP(float sygnal) {
   sygnal_zfiltrowany = (0.945*sygnal_zfiltrowany) + (0.0549*sygnal);
 }
 ```
 
 Testujemy gotowy uklad:
-
-
-![img](./image/gotowe.jpg)
