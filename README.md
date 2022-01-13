@@ -81,6 +81,11 @@ oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Ar
 
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C++**:
+<<<<<<< HEAD
+=======
+
+```cp
+>>>>>>> 314946a7fc1da21ed35b22a41472265a63087b6f
 Pozwalana na skojarzenie pinow z nazwa, ktora bedziemy wykorzystywac w kodzie:
 ```cp
 #define Rpin 11						
@@ -140,3 +145,9 @@ void FiltrLP(float sygnal) {
 ```
 
 Testujemy gotowy uklad:
+<<<<<<< HEAD
+=======
+
+
+![img](./image/gotowe.jpg)
+>>>>>>> 314946a7fc1da21ed35b22a41472265a63087b6f
