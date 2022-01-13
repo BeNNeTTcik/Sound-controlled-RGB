@@ -45,29 +45,83 @@ Rzeczy potrzebne do zbudowania ukladu:
 
 
 Montujemy tranzystory na plytce. Na wysokosci bazy przy kazdym z tranzystorow wpinamy rezystory 1kOhm. Pod jedna z nozek rezystora wpinamy przewod 
-i wpinamy odpowiednio pod `.tranzystor nr 1 -> pin 11` na plytce Arduino, `tranzystor nr 2 -> pin 10` i `tranzystor nr 3 -> pin 9`. Wyjscie z emitera 
-podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: `OUT -> A0 | Analog in (23 pin)`,
+i wpinamy odpowiednio pod `.tranzystor nr 1 -> pin 11` na plytce Arduino, `tranzystor nr 2 -> pin 10` i `tranzystor nr 3 -> pin 9`. 
+
+![img](./image/1.png)
+![img](./image/6.png)
+
+
+Wyjscie z emitera podpinamy pod GND oraz GND z plytki rowniez podpinamy pod GND. 
+
+
+![img](./image/2.png)
+
+
+Teraz laczymy czujnik dzwieku z plytka Arduino odpowiednio: `OUT -> A0 | Analog in (23 pin)`,
 `GND -> GND | (3 lub 5 pin)`, `VCC -> VCC | (4 lub 6 pin)`. Gotowe polaczenia znajduja sie na zdj. ponizej.
 
 
-![img](./image/uklad.png)
-
-
-Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C**:
-
-
-![img](./image/uklad2.png)
+![img](./image/3.png)
 
 
 Zostalo podpiecie zyly o odpowiednich kolorach tasmy LED do kolektorow tranzystorw (od lewej patrzac na zdj tranzystor nr 1 potem 2 i 3 ): `RED -> tranzystor 1`,
-`GREEN -> tranzystor 2`, `BLUE -> tranzystor nr 3`.Ostatni z wejsc to zasilanie do tasmy LED: `BLACK -> plus na plytce`. Teraz musimy podpiac zasilanie do tasmy 
-LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED oraz minus do rzadu gdzie mamy wpiety GND
-z emiterow tranzystorwo oraz plytki Arduino.
+`GREEN -> tranzystor 2`, `BLUE -> tranzystor nr 3`.Ostatni z wejsc to zasilanie do tasmy LED: `BLACK -> plus na plytce`. 
+
+![img](./image/5.png)
 
 
-![img](./image/uklad3.png)
+Teraz musimy podpiac zasilanie do tasmy LED uzyjemy zatrzasku JACK 2.1/5.5 zenskiego,podpinamy plus do tego samego rzedu co kolor czarny pochodzacy z tasmy LED 
+oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Arduino.
 
 
+![img](./image/4.png)
+
+
+Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C++**:
+
+`#define Rpin 11
+`#define Gpin 10
+`#define Bpin 9
+`#define czujnik_sygnal A0
+
+
+`float wartosc=0, sygnal_zfiltrowany = 0, filtr[] = {21, 26};
+`void setup () { 
+  `Serial.begin (9600);
+  `pinMode(czujnik_sygnal, INPUT);
+  `pinMode(Gpin, OUTPUT);
+  `pinMode(Rpin, OUTPUT);
+  `pinMode(Bpin, OUTPUT);
+`}
+
+`void loop () {
+  `wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
+  
+  `FiltrLP(wartosc);
+  
+ ` Serial.println(sygnal_zfiltrowany);
+  
+  `if(sygnal_zfiltrowany>filtr[1]){
+    `  digitalWrite(Rpin,HIGH);
+    `  digitalWrite(Bpin,LOW);
+    `  digitalWrite(Gpin,LOW);
+    `  delay(1);
+    `} else if(sygnal_zfiltrowany>filtr[0] && sygnal_zfiltrowany<filtr[1]){
+    `  digitalWrite(Gpin,HIGH);
+    `  digitalWrite(Bpin,LOW);
+    `  digitalWrite(Rpin,LOW);
+    `  delay(1);
+    `} else if(sygnal_zfiltrowany<filtr[0]){
+    `  digitalWrite(Bpin,HIGH);
+    `  digitalWrite(Rpin,LOW);
+    `  digitalWrite(Gpin,LOW);
+    `  delay(1);
+    `}
+`}
+
+`void FiltrLP(float sygnal) {
+  `sygnal_zfiltrowany = (0.945*sygnal_zfiltrowany) + (0.0549*sygnal);
+`}
 Testujemy gotowy uklad:
 
 
