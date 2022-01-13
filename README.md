@@ -154,3 +154,5 @@ Okreslenie wartosci sygnalu:
 
 
 Testujemy gotowy uklad:
+
+[test]()
