@@ -150,7 +150,7 @@ void FiltrLP(float sygnal) {
 Okreslenie wartosci sygnalu:
 
 
-![img](./image/sygnal.jpg)
+![img](./image/sygnal.png)
 
 
 Testujemy gotowy uklad:
