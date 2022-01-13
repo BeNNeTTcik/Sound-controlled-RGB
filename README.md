@@ -82,7 +82,7 @@ oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Ar
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C++**:
 
-```
+```cp
 Pozwalana na skojarzenie pinow z nazwa, ktora bedziemy wykorzystywac w kodzie:
 #define Rpin 11						
 #define Gpin 10
