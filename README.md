@@ -147,4 +147,10 @@ void FiltrLP(float sygnal) {
 }
 ```
 
+Okreslenie wartosci sygnalu:
+
+
+![img](./image/sygnal.jpg)
+
+
 Testujemy gotowy uklad:
