@@ -79,49 +79,51 @@ oraz minus do rzadu gdzie mamy wpiety GND z emiterow tranzystorwo oraz plytki Ar
 
 Teraz czas na kodowanie w tym celu podpinamy wejscie USB-B na plytce Arduino do laptopa na ktorym mamy srodowisko do programowiania w jezyku **C++**:
 
-`#define Rpin 11
-`#define Gpin 10
-`#define Bpin 9
-`#define czujnik_sygnal A0
+```
+#define Rpin 11
+#define Gpin 10
+#define Bpin 9
+#define czujnik_sygnal A0
 
 
-`float wartosc=0, sygnal_zfiltrowany = 0, filtr[] = {21, 26};
-`void setup () { 
-  `Serial.begin (9600);
-  `pinMode(czujnik_sygnal, INPUT);
-  `pinMode(Gpin, OUTPUT);
-  `pinMode(Rpin, OUTPUT);
-  `pinMode(Bpin, OUTPUT);
-`}
+float wartosc=0, sygnal_zfiltrowany = 0, filtr[] = {21, 26};
+void setup () { 
+  Serial.begin (9600);
+  pinMode(czujnik_sygnal, INPUT);
+  pinMode(Gpin, OUTPUT);
+  pinMode(Rpin, OUTPUT);
+  pinMode(Bpin, OUTPUT);
+}
 
-`void loop () {
-  `wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
+void loop () {
+  wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
   
-  `FiltrLP(wartosc);
+  FiltrLP(wartosc);
   
- ` Serial.println(sygnal_zfiltrowany);
+  Serial.println(sygnal_zfiltrowany);
   
-  `if(sygnal_zfiltrowany>filtr[1]){
-    `  digitalWrite(Rpin,HIGH);
-    `  digitalWrite(Bpin,LOW);
-    `  digitalWrite(Gpin,LOW);
-    `  delay(1);
-    `} else if(sygnal_zfiltrowany>filtr[0] && sygnal_zfiltrowany<filtr[1]){
-    `  digitalWrite(Gpin,HIGH);
-    `  digitalWrite(Bpin,LOW);
-    `  digitalWrite(Rpin,LOW);
-    `  delay(1);
-    `} else if(sygnal_zfiltrowany<filtr[0]){
-    `  digitalWrite(Bpin,HIGH);
-    `  digitalWrite(Rpin,LOW);
-    `  digitalWrite(Gpin,LOW);
-    `  delay(1);
-    `}
-`}
+  if(sygnal_zfiltrowany>filtr[1]){
+      digitalWrite(Rpin,HIGH);
+      digitalWrite(Bpin,LOW);
+      digitalWrite(Gpin,LOW);
+      delay(1);
+    } else if(sygnal_zfiltrowany>filtr[0] && sygnal_zfiltrowany<filtr[1]){
+      digitalWrite(Gpin,HIGH);
+      digitalWrite(Bpin,LOW);
+      digitalWrite(Rpin,LOW);
+      delay(1);
+    } else if(sygnal_zfiltrowany<filtr[0]){
+      digitalWrite(Bpin,HIGH);
+      digitalWrite(Rpin,LOW);
+      digitalWrite(Gpin,LOW);
+      delay(1);
+    }
+}
 
-`void FiltrLP(float sygnal) {
-  `sygnal_zfiltrowany = (0.945*sygnal_zfiltrowany) + (0.0549*sygnal);
-`}
+void FiltrLP(float sygnal) {
+  sygnal_zfiltrowany = (0.945*sygnal_zfiltrowany) + (0.0549*sygnal);
+}
+```
 Testujemy gotowy uklad:
 
 
