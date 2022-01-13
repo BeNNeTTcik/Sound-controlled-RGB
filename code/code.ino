@@ -4,7 +4,7 @@
 #define czujnik_sygnal A0
 
 
-float wartosc=0, sygnal_zfiltrowany = 0, filtr[] = {21, 26};
+float wartosc=0, sygnal_zprzedzialowany = 0, przedzial[] = {21, 26};
 void setup () { 
   Serial.begin (9600);
   pinMode(czujnik_sygnal, INPUT);
@@ -16,21 +16,21 @@ void setup () {
 void loop () {
   wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
   
-  FiltrLP(wartosc);
+  przedzialLP(wartosc);
   
-  Serial.println(sygnal_zfiltrowany);
+  Serial.println(sygnal_zprzedzialowany);
   
-  if(sygnal_zfiltrowany>filtr[1]){
+  if(sygnal_zprzedzialowany>przedzial[1]){
       digitalWrite(Rpin,HIGH);
       digitalWrite(Bpin,LOW);
       digitalWrite(Gpin,LOW);
       delay(1);
-    } else if(sygnal_zfiltrowany>filtr[0] && sygnal_zfiltrowany<filtr[1]){
+    } else if(sygnal_zprzedzialowany>przedzial[0] && sygnal_zprzedzialowany<przedzial[1]){
       digitalWrite(Gpin,HIGH);
       digitalWrite(Bpin,LOW);
       digitalWrite(Rpin,LOW);
       delay(1);
-    } else if(sygnal_zfiltrowany<filtr[0]){
+    } else if(sygnal_zprzedzialowany<przedzial[0]){
       digitalWrite(Bpin,HIGH);
       digitalWrite(Rpin,LOW);
       digitalWrite(Gpin,LOW);
@@ -38,6 +38,6 @@ void loop () {
     }
 }
 
-void FiltrLP(float sygnal) {
-  sygnal_zfiltrowany = (0.945*sygnal_zfiltrowany) + (0.0549*sygnal);
+void przedzialLP(float sygnal) {
+  sygnal_zprzedzialowany = (0.945*sygnal_zprzedzialowany) + (0.0549*sygnal);
 }
