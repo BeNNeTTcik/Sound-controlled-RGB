@@ -155,4 +155,4 @@ Okreslenie wartosci sygnalu:
 
 Testujemy gotowy uklad:
 
-[test]()
+[test](https://youtu.be/P37CNaUVJhc)

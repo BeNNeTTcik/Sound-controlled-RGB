@@ -16,7 +16,7 @@ void setup () {
 void loop () {
   wartosc=analogRead(czujnik_sygnal)*(5.0/128.0);
   
-  przedzialLP(wartosc);
+  FiltrLP(wartosc);
   
   Serial.println(sygnal_zprzedzialowany);
   
@@ -38,6 +38,6 @@ void loop () {
     }
 }
 
-void przedzialLP(float sygnal) {
+void FiltrlLP(float sygnal) {
   sygnal_zprzedzialowany = (0.945*sygnal_zprzedzialowany) + (0.0549*sygnal);
 }
